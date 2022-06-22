@@ -1,9 +1,11 @@
 defmodule GcHub do
   @moduledoc """
-  GcHub keeps the contexts that define your domain
-  and business logic.
-
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
+  Esse módulo é utilizado como uma Facade. Ele irá interligar a camada Web (GcHub.Web) com a Camada de Negócio (GcHub).
+  Os delegates deste módulo são chamados pelo Controller.
   """
+  alias GcHub.Lider
+
+  defdelegate fetch_lider(params), to: Lider.Get, as: :call
+  defdelegate fetch_lider(), to: Lider.Get, as: :call
+
 end
