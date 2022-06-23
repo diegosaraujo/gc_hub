@@ -6,6 +6,5 @@ defmodule GcHub do
   alias GcHub.Lider
 
   defdelegate fetch_lider(params), to: Lider.Get, as: :call
-  defdelegate fetch_lider(), to: Lider.Get, as: :call
 
 end

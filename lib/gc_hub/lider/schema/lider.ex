@@ -1,5 +1,4 @@
 defmodule GcHub.Lider do
-  alias GcHub.Repo
 
   use Ecto.Schema
   import Ecto.Changeset
